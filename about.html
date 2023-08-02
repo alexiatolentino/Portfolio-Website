@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> About Me </title>
+        <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main class="main" id="main">
+            <header class="header">
+                <div class="wrap d-flex">
+                    <h1 class="logo">
+                </div>
+                <a href="javascript:void(0);" class="sidemenu-toggler">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <div class="sidemenu">
+                    <a href="javascript:void(0);" class="close"></a>
+                    <nav>
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="">Pages</a></li>
+                            <li><a href="skills.html">Skills</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <footer>
+                        <p>2023 Alexia Tolentino</p>
+                    </footer>
+                </div>
+            </header>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+
+            $(document).ready(function(){
+                $(".sidemenu-toggler").click(function(){
+                    $(".sidemenu").addClass("active");
+                });
+
+                $(".close").click(function(){
+                    $(".sidemenu").removeClass("active");
+                });
+            });
+
+
+        </script>
+    </body>
+</html>
