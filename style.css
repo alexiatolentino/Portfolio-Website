@@ -40,29 +40,8 @@ ul{
     justify-content: space-between;
 }
 
-/*LOGO*/
-.header .logo{
-    margin: 0;
-    padding: 16px 0;
-}
-
-
-.header .logo a,
-.header .logo a img{
-    display: block;
-}
-
-
-.header .logo img{
-    position: fixed;
-    width: 140px;
-    margin-top: -38px;
-    top: 0;
-    left: 0;
-}
-
 /*HEADER MENU*/
-/* .header .menu ul{
+.header .menu ul{
     display: flex;
 }
 
@@ -76,7 +55,7 @@ ul{
 
 .header .menu a:hover{
     color: deeppink;
-} */
+}
 
 /*SIDE MENU TOGGLER*/
 
@@ -179,11 +158,55 @@ ul{
 }
 
 .header .sidemenu nav a:hover{
-    color: deeppink;
+    color: deepskyblue;
 }
 
-.header footer{
+/*FOOTER STYLES*/
+.footer {
+    background-color: #333;
+    color: #fff;
+    margin-top: 1100px;
+    padding: 20px 0;
+    text-align: center; /* Center text content */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center items horizontally */
+    max-width: 1200px;
+    margin: 0 auto;
+    /* padding: 0 20px; Adjust padding as needed */
+}
+
+.footer-social {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
+    justify-content: center;
+    margin-top: 20px; /* Add some space between social icons and bottom content */
+}
+
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: deepskyblue;
+}
+
+.footer-bottom {
+    padding: 5px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Font Awesome Icons */
+.footer-social i {
+    font-size: 20px;
+    margin: 10px;
 }
