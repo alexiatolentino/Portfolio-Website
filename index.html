@@ -9,9 +9,6 @@
     </head>
     <body>
         <header class="header">
-            <div class="wrap d-flex">
-                <h1 class="logo">My Logo</h1>
-            </div>
             <a href="javascript:void(0);" class="sidemenu-toggler">
                 <span></span>
                 <span></span>
@@ -33,15 +30,14 @@
             </div>
         </header>
 
-        <main class="main" id="main">
-            <!-- Your main content goes here -->
-        </main>
+        <!-- Allocate Space for Background -->
+        <div class="bg-container">
+        </div>
 
         <footer class="footer">
             <div class="footer-content">
                 <div class="footer-social">
-                    <a href="https://github.com/alexiatolentino"><i class="fa-brands fa-github"></i></i>Github</a>
-                    <a>|</a>
+                    <a href="https://github.com/alexiatolentino"><i class="fa-brands fa-github"></i></i>Github |</a>
                     <a href="https://www.linkedin.com/in/alexia-tolentino/"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
                 </div>
             </div>
@@ -52,6 +48,13 @@
 
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script>
+            const backgroundImage = new Image();
+            backgroundImage.src = 'images/main_bg.png'; // Replace with your image URL
+
+            backgroundImage.onload = function() {
+                document.documentElement.style.setProperty('--bg-width', `${backgroundImage.width}px`);
+                document.documentElement.style.setProperty('--bg-height', `${backgroundImage.height}px`);
+            };
             $(document).ready(function(){
                 $(".sidemenu-toggler").click(function(){
                     $(".sidemenu").addClass("active");
@@ -61,6 +64,22 @@
                     $(".sidemenu").removeClass("active");
                 });
             });
+
+            //  // Function to calculate the reduction percentage
+            // function calculateReductionPercentage() {
+            //     const currentViewportWidth = window.innerWidth;
+            //     const currentViewportHeight = window.innerHeight;
+
+            //     const widthDifference = initialViewportWidth - currentViewportWidth;
+            //     const heightDifference = initialViewportHeight - currentViewportHeight;
+
+            //     const widthReductionPercentage = (widthDifference / initialViewportWidth) * 100;
+            //     const heightReductionPercentage = (heightDifference / initialViewportHeight) * 100;
+
+            //     return {
+            //     width: widthReductionPercentage.toFixed(2),
+            //     height: heightReductionPercentage.toFixed(2),
+            // };
         </script>
     </body>
 </html>
