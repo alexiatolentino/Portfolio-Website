@@ -47,6 +47,6 @@ I'm excited about the potential of this portfolio and the opportunity to showcas
 If you have any questions or suggestions or just want to reach out for any reason please feel free to contact me!:
 
 - Email: [c.alexiatolentino@gmail.com](mailto:c.alexiatolentino@gmail.com)
-- LinkedIn: [Alexia Tolentino Name](https://www.linkedin.com/in/alexia-tolentino/)
+- LinkedIn: [Alexia Tolentino](https://www.linkedin.com/in/alexia-tolentino/)
 
 Thank you for visiting, and I look forward to sharing more updates soon!
