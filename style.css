@@ -26,55 +26,163 @@ Pale Blue: rgba(103,124,212,255)
 
 
 .bg-container{
-    flex: 1;
     background-image: url(images/main_bg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding-bottom: 1000px; /*Adjust spacing so image stays relatively large*/
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     /* For Ineractable Icons */
     list-style: none;
 }
 
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+/* SIDE MENU TOGGLER */
+.header .sidemenu-toggler{
+    position:absolute;
+    width: 40px;
+    padding: 6px;
+    top: 23px;
+    right: 40px;
+}
+
+.header .sidemenu-toggler > span{
+    display: block;
+    background-color: white;
+    height: 2px;
+}
+
+.header .sidemenu-toggler > span:nth-child(2){
+    margin: 4px 0 4px auto;
+    width: 75%;
+    transition: 0.3s all;
+}
+
+.header .sidemenu-toggler > span:nth-child(3){
+    margin-left: auto;
+    width: 50%;
+    transition: 0.6s all;
+}
+
+/*Side menu animation*/
+.header .sidemenu-toggler:hover > span:nth-child(2),
+.header .sidemenu-toggler:hover > span:nth-child(3){
+    width: 100%;
+}
+
+/*SIDE MENU*/
+.header .sidemenu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgba(42,44,46,0.27);
+    box-shadow: 0 8px 32px 0 rgba(11,11,11,0.37);
+    backdrop-filter: blur(34px);
+    border: 1px solid rgba(255,255,255,0.18);
+    width: 25%;
+    height: 100vh;
+    z-index: 999;
+    padding: 4rem;
+    color: white;
+    transform: translate3d(100%,0,0);
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+/*side menu actions*/
+.header .sidemenu.active{
+    transform: translate3d(0,0,0);
+}
+
+.header .sidemenu .close{
+    height: 30px;
+    width: 30px;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 24px;
+}
+
+.header .sidemenu .close::before,
+.header .sidemenu .close::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 13px;
+    height: 28px;
+    width: 2px;
+    background: white;
+}
+
+.header .sidemenu .close::before{
+    transform: rotate(45deg);
+}
+
+.header .sidemenu .close::after{
+    transform: rotate(-45deg);
+}
+
+.header .sidemenu nav ul{
+    padding-top: 30px;
+}
+
+.header .sidemenu nav li{
+    padding: 15px 0;
+}
+
+.header .sidemenu nav a{
+    font-size: 1.3rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.header .sidemenu nav a:hover{
+    color: deeppink;
+}
+
 /* Moving Question Mark Icon */
-.fa-question-circle{
+.fa-user-edit {
     color: darkblue;
-    font-size: 85px;
-    position: absolute;
-    top: 295px;
-    left: 750px;
-    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transform: translate(38vh, 26vh);
 }
 
-/* Moving Cogs Icon */
-.fa-cogs{
-    color: darkblue;
-    font-size: 85px;
-    position: absolute;
-    top: 420px;
-    left: 820px;
-    transform: translate(-50%, -50%);
+.fa-user-edit:hover{
+    color: rgb(210, 0, 112);
 }
 
-.fa-cogs:hover{
-    color: black;
-    font-size: 85px;
-    position: absolute;
-    top: 420px;
-    left: 820px;
-    transform: translate(-50%, -50%);
+/* Moving Code Icon */
+.fa-laptop-code {
+    color: darkblue;
+    font-size: 88px;
+    transform: translate(37vh, 39vh);
 }
+
+.fa-laptop-code:hover{
+    color: rgb(210, 0, 112);
+}
+
 
 /* Moving Address Book */
-.fa-address-book{
+.fa-envelope {
     color: darkblue;
     font-size: 75px;
-    position: absolute;
-    top: 550px;
-    left: 780px;
-    transform: translate(-50%, -50%);
+    transform: translate(21.5vh, 52vh);
 }
+
+.fa-envelope:hover{
+    color: rgb(210, 0, 112);
+}
+
 
 ol,ul{
     list-style: none;
@@ -126,7 +234,10 @@ ul{
     color: deeppink;
 }
 
-/*MAIN ABOUT ME STYLES*/
+
+
+
+/* MAIN ABOUT ME STYLES */
 
 .about{
     width: 100%;
@@ -240,135 +351,19 @@ button:hover{
     align-items: left;
 }
 
-/* .hobbies .content img{
-    height: auto;
-    width: 600px;
-    max-width: 100%;
-}
-
-.hobbies .text{
-    width: 550px;
-    max-width: 100%;
-    padding: 0 10px;
-}
-
-.hob.content{
-    width: 1280px;
-    max-width: 95%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-} */
 
 
-/* SIDE MENU TOGGLER */
-.header .sidemenu-toggler{
-    position:absolute;
-    width: 40px;
-    padding: 6px;
-    top: 23px;
-    right: 40px;
-}
+/* CONTACT ME STYLES */
 
-.header .sidemenu-toggler > span{
-    display: block;
-    background-color: white;
-    height: 2px;
-}
-
-.header .sidemenu-toggler > span:nth-child(2){
-    margin: 4px 0 4px auto;
-    width: 75%;
-    transition: 0.3s all;
-}
-
-.header .sidemenu-toggler > span:nth-child(3){
-    margin-left: auto;
-    width: 50%;
-    transition: 0.6s all;
-}
-
-/*Side menu animation*/
-.header .sidemenu-toggler:hover > span:nth-child(2),
-.header .sidemenu-toggler:hover > span:nth-child(3){
-    width: 100%;
-}
-
-/*SIDE MENU*/
-.header .sidemenu{
-    position: fixed;
-    top: 0;
-    right: 0;
-    background: rgba(42,44,46,0.27);
-    box-shadow: 0 8px 32px 0 rgba(11,11,11,0.37);
-    backdrop-filter: blur(34px);
-    border: 1px solid rgba(255,255,255,0.18);
-    width: 25%;
-    height: 100vh;
-    z-index: 999;
-    padding: 4rem;
+.text ul{
     color: white;
-    transform: translate3d(100%,0,0);
-    transition: transform 0.5s ease-in-out;
-    overflow: hidden;
-}
-
-/*side menu actions*/
-.header .sidemenu.active{
-    transform: translate3d(0,0,0);
-}
-
-.header .sidemenu .close{
-    height: 30px;
-    width: 30px;
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 24px;
-}
-
-.header .sidemenu .close::before,
-.header .sidemenu .close::after{
-    content:"";
-    position: absolute;
-    top: 0;
-    left: 13px;
-    height: 28px;
-    width: 2px;
-    background: white;
-}
-
-.header .sidemenu .close::before{
-    transform: rotate(45deg);
-}
-
-.header .sidemenu .close::after{
-    transform: rotate(-45deg);
-}
-
-.header .sidemenu nav ul{
-    padding-top: 30px;
-}
-
-.header .sidemenu nav li{
-    padding: 15px 0;
-}
-
-.header .sidemenu nav a{
-    font-size: 1.3rem;
-    color: white;
-    text-transform: uppercase;
-}
-
-.header .sidemenu nav a:hover{
-    color: deeppink;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
 }
 
 
-
-/* STYLES FOR ABOUT ME PAGE */
 
 /*FOOTER STYLES*/
 .footer {
