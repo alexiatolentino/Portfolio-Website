@@ -153,7 +153,7 @@ Pale Blue: rgba(103,124,212,255)
 .fa-user-edit {
     color: darkblue;
     font-size: 80px;
-    transform: translate(38vh, 26vh);
+    transform: translate(38vh, 30vh);
 }
 
 .fa-user-edit:hover{
@@ -164,7 +164,7 @@ Pale Blue: rgba(103,124,212,255)
 .fa-laptop-code {
     color: darkblue;
     font-size: 88px;
-    transform: translate(37vh, 39vh);
+    transform: translate(37vh, 44vh);
 }
 
 .fa-laptop-code:hover{
@@ -176,7 +176,7 @@ Pale Blue: rgba(103,124,212,255)
 .fa-envelope {
     color: darkblue;
     font-size: 75px;
-    transform: translate(21.5vh, 52vh);
+    transform: translate(20vh, 57vh);
 }
 
 .fa-envelope:hover{
@@ -353,7 +353,7 @@ button:hover{
 
 .hobbies .content img{
     height: auto;
-    width: 1000px;
+    /* width: 1000px; */
     max-width: 100%;
 }
 
@@ -381,13 +381,31 @@ button:hover{
 }
 
 .text article{
-    color: white;
+    color: lightgrey;
     font-size: 12px;
     font-weight: lighter;
     margin: 10px;
     padding-bottom: 10px;
 }
 
+/* Styles for the container */
+.art-container {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+}
+
+/* Styles for each art item */
+.art-item {
+    flex: 1;
+    max-width: 48%; /* Adjust as needed to control the spacing */
+    text-align: center; /* Optional: Center the content horizontally */
+    margin: 10px; /* Add some margin between items */
+}
+
+/* Styles for images */
+.art_samples {
+    max-width: 100%; /* Ensure images don't exceed their container */
+}
 
 
 
