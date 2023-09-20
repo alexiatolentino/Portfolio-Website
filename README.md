@@ -26,6 +26,12 @@ During the development of this portfolio, I've utilized a variety of technologie
 - Git for version control and collaboration.
 - Visual Studio Code as my code editor. 
 
+To have auto refresh when making changes:
+1. Go to the Extensions tab in VS Code
+2. Search "Live Server" and install the first extension you see
+3. Click on the file that you are working on
+4. Press ALT+L+O to open a live server for that specific file
+
 ## Future Plans
 
 I'm committed to continuously improving this portfolio to provide a better experience for visitors. Here's what you can expect in the near future:

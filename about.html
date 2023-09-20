@@ -2,17 +2,15 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title> My Portfolio Website </title>
-        <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+        <title>My Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/5f8d1bb974.js" crossorigin="anonymous"></script>
     </head>
     <body>
+        <!-- HEADER + SIDE MENU -->
         <main class="main" id="main">
             <header class="header">
-                <div class="wrap d-flex">
-                    <h1 class="logo">
-                </div>
                 <a href="javascript:void(0);" class="sidemenu-toggler">
                     <span></span>
                     <span></span>
@@ -33,33 +31,77 @@
                     </footer>
                 </div>
             </header>
+             <!-- MAIN PAGE CONTENT -->
+             <section class="about">
+                <div class="content">
+                    <img src="images/my_portrait.JPG" class="portrait">
+                    <div class = "text">
+                        <h1>About Me</h1>
+                        <h5>Introduction</h5>
+                        <p id="about-text">I’ve questioned for a long time if there really is enough about myself/my experiences that I can write about to fill a website, 
+                            but I sure will try! </p>
+                        <button id="change-text-button" type="button">Learn More</button>
+                    </div>
+                </div>
+            </section>
+            <section class="hobbies">
+                <div class="content">
+                    <img src="" class="portrait">
+                    <div class = "text">
+                        <h1>Hobbies</h1>
+                        <p id="hobbies_desc">
+                            I have a couple of hobbies at the moment, some that I am able to be more consistent with than others, but I love each of them very much. 
+                        </p>
+                        <h5>Video Games</h5>
+                        <p id="video_games">
+                            The first being video games! I’ve always loved video games, ever since I was a kid, I’ve been playing games. When I was younger, 
+                            I didn’t have any gaming consoles, so I turned to PC gaming as my main source. I went from gaming on an old family laptop from the 
+                            mid 2000’s to now having built my own PC. I must say I don’t miss the days of getting under 10 fps (frames per second) in Minecraft, 
+                            but it definitely helps me appreciate what I have now. In terms of genres, I spend most of my time on first person shooter games like 
+                            Valorant or life simulation games such as Animal Crossing or Stardew Valley.  However, I like to dabble in anything else my friends 
+                            bring up and am always open to trying something new!
+                        </p>
+                        <h5>Weight Training</h5>
+                        <p id="weight_training">
+                            Next hobby on the list would be strength training and overall fitness. This has been a much more recent endeavor, as I have only really 
+                            been doing it for almost 2 years now, but I love feeling like I am taking care of myself. I feel like it has brought a nice routine to my 
+                            life and gets me off the computer for a few hours a day. I also enjoy goal setting and keeping myself motivated to improve on something. 
+                            Being aware of how food can affect your body as well has been very insightful and I feel like I’ve learned a lot about myself in the process. 
+                            I think it’s brought a lot of balance; and, I mean, who doesn’t want to be able to lift (relatively) heavy things?
+                        </p>
+                        <h5>The Arts</h5>
+                        <p id="the_arts">
+                            Last but definitely not least would be art. As you can hopefully tell by the site, I love to create things that are visually appealing. This 
+                            has always been a constant in my life and has spilled and infiltrated many other aspects. I’m sure I could go on for hours, and I’ve already 
+                            mentioned it above, but instead I’ll just show you a few of my pieces 😊. 
+                        </p>
+                    </div>
+                </div>
+            </section>
         </main>
+
+        <!-- SPACE FOR FOOTER -->
         <footer class="footer">
             <div class="footer-content">
-                <!-- <div class="footer-logo">
-                    <img src="logo.png" alt="Your Logo">
-                </div> -->
-                <div class="footer-links">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
                 <div class="footer-social">
-                    <ul>
-                        <li><a href="#" target="_blank"><i class="fab fa-github"></i></a></li>
-                        <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                    </ul>
+                    <a href="https://github.com/alexiatolentino"><i class="fa-brands fa-github"></i></i>Github |</a>
+                    <a href="https://www.linkedin.com/in/alexia-tolentino/"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2023 C. Alexia Tolentino. All Rights Reserved. | Designed by C. Alexia Tolentino</p>
             </div>
         </footer>
+
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script>
+            const backgroundImage = new Image();
+            backgroundImage.src = 'images/main_bg.png'; // Replace with your image URL
 
+            backgroundImage.onload = function() {
+                document.documentElement.style.setProperty('--bg-width', `${backgroundImage.width}px`);
+                document.documentElement.style.setProperty('--bg-height', `${backgroundImage.height}px`);
+            };
             $(document).ready(function(){
                 $(".sidemenu-toggler").click(function(){
                     $(".sidemenu").addClass("active");
@@ -71,6 +113,48 @@
             });
 
 
+            // FUNCTION TO CHANGE TEXT WHEN LEARN MORE IS CLICKED
+            document.addEventListener("DOMContentLoaded", function () {
+                const aboutText = document.getElementById("about-text");
+                const changeTextButton = document.getElementById("change-text-button");
+                let originalText = true;
+                let backToOriginal = false;
+
+                const creative = "However, there is more than creating that motivates me. Simply put, I love to help people. Whether it’s through creating something that makes someone’s job easier, making something that looks cool, or making sense out of a mess of data. Even if it’s something that no one notices but without it their experience would be a lot less seamless; that is what I want to provide. In every position I’ve had, I wanted to prioritize my customer. My customers have ranged from just one individual, to a team, to millions of people worldwide. Whenever I work, I make sure to consider them at the forefront. If I know that I have helped someone, then I know my efforts have paid off."
+
+                // Function to change the text
+                function changeText() {
+                    // CASE THAT WE WANT TO CHANGE TEXT INTIALLY
+                    if (originalText) {
+                        aboutText.style.opacity = 0; // Fade out the original text
+                        setTimeout(() => {
+                            aboutText.textContent = "At my core I am a creative, whether it’s through a paintbrush or a coding language, everything is a tool for me to create something new or useful. At a young age I started drawing and painting, I filled sketch books upon sketch books full of ‘art’ (now it’s Jupyter notebooks haha). I’ve tried to keep this consistent throughout the years, some of which I’m sure I’ll share with you here. In fact, most of the imagery used on this site is original digital art that I created for the site, fresh new content just for your viewing! I guess you can say I feel a sense of accomplishment when I can create something, through the ideation, the creation, and of course the finalization. Feeling like I was able to create something has always been a feeling I craved. So luckily, I found a career that enables me to do so, it’s a different media and a very different output but still most definitely is a creation; this surely helps with problem solving as well."; // Replace the text content
+                            aboutText.style.opacity = 1; // Fade in the new text
+                            originalText = false; // Set the flag to false
+                        }, 500); // Wait for the fade-out transition (500ms)
+                    } else if (backToOriginal){ // CASE THAT WE GO BACK TO START
+                        aboutText.style.opacity = 0; // Fade out the original text
+                        setTimeout(() => {
+                            aboutText.textContent = "I’ve questioned for a long time if there really is enough about myself/my experiences that I can write about to fill a website, but I sure will try!" 
+                            aboutText.style.opacity = 1; // Fade in the new text
+                            backToOriginal = false; // Set the flag to true
+                            originalText = true; // Set the flag to false
+                            changeTextButton.textContent = "Learn More"; 
+                        }, 500); // Wait for the fade-out transition (500ms)
+                    } else { // CASE THAT WE ARE AT THE END
+                        aboutText.style.opacity = 0; // Fade out the new text
+                        setTimeout(() => {
+                            aboutText.textContent = "However, there is more than creating that motivates me. Simply put, I love to help people. Whether it’s through creating something that makes someone’s job easier, making something that looks cool, or making sense out of a mess of data. Even if it’s something that no one notices but without it their experience would be a lot less seamless; that is what I want to provide. In every position I’ve had, I wanted to prioritize my customer. My customers have ranged from just one individual, to a team, to millions of people worldwide. Whenever I work, I make sure to consider them at the forefront. If I know that I have helped someone, then I know my efforts have paid off. "; // Replace the text content again
+                            aboutText.style.opacity = 1; // Fade in the new text
+                            backToOriginal = true; // Set the flag to true
+                            changeTextButton.textContent = "Back to Start"; 
+                        }, 500); // Wait for the fade-out transition (500ms)
+                    }
+                }
+
+                // Event listener for the button click
+                changeTextButton.addEventListener("click", changeText);
+            });
         </script>
     </body>
 </html>

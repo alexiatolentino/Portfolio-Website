@@ -2,17 +2,15 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title> My Portfolio Website </title>
-        <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+        <title>My Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/5f8d1bb974.js" crossorigin="anonymous"></script>
     </head>
     <body>
+        <!-- HEADER + SIDE MENU -->
         <main class="main" id="main">
             <header class="header">
-                <div class="wrap d-flex">
-                    <h1 class="logo">
-                </div>
                 <a href="javascript:void(0);" class="sidemenu-toggler">
                     <span></span>
                     <span></span>
@@ -33,10 +31,46 @@
                     </footer>
                 </div>
             </header>
+             <!-- MAIN PAGE CONTENT -->
+             <section class="about">
+                <div class="content">
+                    <img src="images/my_portrait.JPG" class="portrait">
+                    <div class = "text">
+                        <h1>Contact Me</h1>
+                        <h5>
+                            Feel free to email me or send me a message on LinkedIn!
+                        </h5>
+                        <ul>
+                            <li>Email: <a href="mailto:c.alexiatolentino@gmail.com">c.alexiatolentino@gmail.com</a></li>
+                            <li>Linkedin: <a href="https://www.linkedin.com/in/alexia-tolentino/">Alexia Tolentino</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </main>
+
+        <!-- SPACE FOR FOOTER -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="https://github.com/alexiatolentino"><i class="fa-brands fa-github"></i></i>Github |</a>
+                    <a href="https://www.linkedin.com/in/alexia-tolentino/"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 C. Alexia Tolentino. All Rights Reserved. | Designed by C. Alexia Tolentino</p>
+            </div>
+        </footer>
+
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script>
+            const backgroundImage = new Image();
+            backgroundImage.src = 'images/main_bg.png'; // Replace with your image URL
 
+            backgroundImage.onload = function() {
+                document.documentElement.style.setProperty('--bg-width', `${backgroundImage.width}px`);
+                document.documentElement.style.setProperty('--bg-height', `${backgroundImage.height}px`);
+            };
             $(document).ready(function(){
                 $(".sidemenu-toggler").click(function(){
                     $(".sidemenu").addClass("active");
@@ -46,8 +80,6 @@
                     $(".sidemenu").removeClass("active");
                 });
             });
-
-
         </script>
     </body>
 </html>

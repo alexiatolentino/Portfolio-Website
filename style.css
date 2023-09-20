@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 :root{
     --bg-width: 100vw; /* 100% of the viewport width */
     --bg-height: 50vh; /* 50% of the viewport height */
@@ -9,9 +10,20 @@ body{
     display: flex;
     height: 100vh;
     flex-direction: column;
-    font-family: tahoma;
+    font-family: 'Poppins', sans-serif;
     color: #26313c;
 }
+
+
+/* MAIN COLORS USED
+
+Background: rgba(0,0,3,255)
+Deep Blue: rgba(6,33,136,255)
+Mid Blue: rgba(32,72,230,255)
+Pale Blue: rgba(103,124,212,255)
+
+*/
+
 
 .bg-container{
     flex: 1;
@@ -20,6 +32,48 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     padding-bottom: 1000px; /*Adjust spacing so image stays relatively large*/
+
+    /* For Ineractable Icons */
+    list-style: none;
+}
+
+/* Moving Question Mark Icon */
+.fa-question-circle{
+    color: darkblue;
+    font-size: 85px;
+    position: absolute;
+    top: 295px;
+    left: 750px;
+    transform: translate(-50%, -50%);
+}
+
+/* Moving Cogs Icon */
+.fa-cogs{
+    color: darkblue;
+    font-size: 85px;
+    position: absolute;
+    top: 420px;
+    left: 820px;
+    transform: translate(-50%, -50%);
+}
+
+.fa-cogs:hover{
+    color: black;
+    font-size: 85px;
+    position: absolute;
+    top: 420px;
+    left: 820px;
+    transform: translate(-50%, -50%);
+}
+
+/* Moving Address Book */
+.fa-address-book{
+    color: darkblue;
+    font-size: 75px;
+    position: absolute;
+    top: 550px;
+    left: 780px;
+    transform: translate(-50%, -50%);
 }
 
 ol,ul{
@@ -72,8 +126,144 @@ ul{
     color: deeppink;
 }
 
-/*SIDE MENU TOGGLER*/
+/*MAIN ABOUT ME STYLES*/
 
+.about{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,3,255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .content img{
+    height: auto;
+    width: 600px;
+    max-width: 100%;
+}
+
+.text{
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+.content{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.text h1{
+    color: #677cd4;
+    font-size: 85px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+.text h5{
+    color: white;
+    font-size: 25px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+/* MAIN PARAGRAPHS */
+
+.text p{
+    color: white;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
+}
+
+/* Initial state of text */
+#about-text {
+    color: white;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+button{
+    background-color: #677cd4;
+    color: black;
+    border: 2px solid transparent;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+button:hover{
+    transform: scale(1.2);
+    background-color: transparent;
+    border: 2px solid #677cd4;
+    color: #677cd4;
+    transition: .4s;
+    cursor: pointer;
+}
+
+/* ADJUST ABOUT ME PAGE DUE TO SIZING OF PAGE */
+
+@media screen and (max-width: 1180px) {
+    .about{
+        width: 100%;
+        height: auto;
+        padding: 70px 0px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .about .content img{
+        margin-bottom: 35px;
+    }
+    .text h1{
+        font-size: 60px;
+        margin-bottom: 25px;
+    }
+}
+
+/* HOBBIES STYLES */
+.hobbies{
+    width: 100%;
+    height: 150vh;
+    background-color: rgba(0,0,3,255);
+    display: flex;
+    justify-content: left;
+    align-items: left;
+}
+
+/* .hobbies .content img{
+    height: auto;
+    width: 600px;
+    max-width: 100%;
+}
+
+.hobbies .text{
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+.hob.content{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+} */
+
+
+/* SIDE MENU TOGGLER */
 .header .sidemenu-toggler{
     position:absolute;
     width: 40px;
@@ -115,7 +305,7 @@ ul{
     box-shadow: 0 8px 32px 0 rgba(11,11,11,0.37);
     backdrop-filter: blur(34px);
     border: 1px solid rgba(255,255,255,0.18);
-    width: 53%;
+    width: 25%;
     height: 100vh;
     z-index: 999;
     padding: 4rem;
@@ -173,8 +363,12 @@ ul{
 }
 
 .header .sidemenu nav a:hover{
-    color: deepskyblue;
+    color: deeppink;
 }
+
+
+
+/* STYLES FOR ABOUT ME PAGE */
 
 /*FOOTER STYLES*/
 .footer {
@@ -206,7 +400,7 @@ ul{
 }
 
 .footer-social a:hover {
-    color: deepskyblue;
+    color: deeppink;
 }
 
 .footer-bottom {
