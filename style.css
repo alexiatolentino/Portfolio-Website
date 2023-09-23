@@ -384,7 +384,7 @@ button:hover{
     color: lightgrey;
     font-size: 12px;
     font-weight: lighter;
-    margin: 10px;
+    margin: 5px;
     padding-bottom: 10px;
 }
 
@@ -405,7 +405,91 @@ button:hover{
 /* Styles for images */
 .art_samples {
     max-width: 100%; /* Ensure images don't exceed their container */
+    max-height: 80vh;
 }
+
+/* SKILLS STYLES */
+.skills{
+    width: 100%;
+    background-color: rgba(0,0,3,255);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.skills .content img{
+    height: auto;
+    /* width: 1000px; */
+    max-width: 100%;
+}
+
+.skills .text{
+    width: 800vh;
+    max-width: 100%;
+    margin: 27px 27px;
+    padding: 0 10px;
+}
+
+.skills .text h1{
+    color: #677cd4;
+    font-size: 85px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+
+.skills .text h5{
+    color: rgb(210, 0, 112);
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.skills .text h4{
+    color: lightslategrey;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.skills .text h3{
+    color: #677cd4;
+    font-size: 70px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.skills li{
+    list-style-type: square;
+    margin-left: 3em;
+  }
+
+/* Styles for the images */
+.img-container {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+}
+
+/* Styles for each art item */
+.img-item {
+    flex: 1;
+    max-width: 48%; /* Adjust as needed to control the spacing */
+    text-align: center; /* Optional: Center the content horizontally */
+    margin: 10px; /* Add some margin between items */
+}
+
+/* Styles for images */
+.img_samples {
+    max-width: 100%; /* Ensure images don't exceed their container */
+    max-height: 80vh;
+}
+
+
 
 
 
