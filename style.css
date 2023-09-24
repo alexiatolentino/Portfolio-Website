@@ -469,6 +469,16 @@ button:hover{
     margin-left: 3em;
   }
 
+/* FOR COLUMN LAYOUT */
+
+.row {
+    display: flex;
+    }
+  
+.column {
+    flex: 50%;
+    }
+
 /* Styles for the images */
 .img-container {
     display: flex;
