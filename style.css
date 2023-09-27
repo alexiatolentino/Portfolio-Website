@@ -151,13 +151,6 @@ Pale Blue: rgba(103,124,212,255)
 
 /* Moving Question Mark Icon */
 
-/* .main-menu {
-    display: flex;
-    padding: 100px;
-    top: 37vh;
-    left: 20vw;
-} */
-
 .main-container {
     background-image: url(images/main_bg.png);
     background-size: cover;
@@ -191,16 +184,9 @@ Pale Blue: rgba(103,124,212,255)
     margin-bottom: 20px
 }
 
-.fa-user-edit {
-    color: darkblue;
-    font-size: 80px;
-    transform: translate(38vh, 30vh);
+li{
+    list-style: none;
 }
-
-#about, #skills, #contact {
-    margin-bottom: 20px;
-}
-
 
 img{
     max-width: 100%;
