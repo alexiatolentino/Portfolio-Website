@@ -150,43 +150,56 @@ Pale Blue: rgba(103,124,212,255)
 }
 
 /* Moving Question Mark Icon */
+
+/* .main-menu {
+    display: flex;
+    padding: 100px;
+    top: 37vh;
+    left: 20vw;
+} */
+
+.main-container {
+    background-image: url(images/main_bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 900px; /* Adjust spacing so image stays relatively large */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* Divide the screen into nine equal columns */
+}
+
+.main-menu {
+    position: absolute;
+    top: 30vh; /* Adjust to place the menu at a specific vertical position */
+    right: calc(50% - 430px); /* Adjust the right position to keep it fixed horizontally */
+    width: 300px; /* Adjust the width as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+}
+
+#about, #skills, #contact {
+    margin-bottom: 20px
+}
+
 .fa-user-edit {
     color: darkblue;
     font-size: 80px;
     transform: translate(38vh, 30vh);
 }
 
-.fa-user-edit:hover{
-    color: rgb(210, 0, 112);
+#about, #skills, #contact {
+    margin-bottom: 20px;
 }
 
-/* Moving Code Icon */
-.fa-laptop-code {
-    color: darkblue;
-    font-size: 88px;
-    transform: translate(37vh, 44vh);
-}
-
-.fa-laptop-code:hover{
-    color: rgb(210, 0, 112);
-}
-
-
-/* Moving Address Book */
-.fa-envelope {
-    color: darkblue;
-    font-size: 75px;
-    transform: translate(20vh, 57vh);
-}
-
-.fa-envelope:hover{
-    color: rgb(210, 0, 112);
-}
-
-
-ol,ul{
-    list-style: none;
-}
 
 img{
     max-width: 100%;
